@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
+  <title>My LIFF app</title>
+  <link rel="stylesheet" href="css/style.css" media="all">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <h3>Status Upload Snipp</h3>
+    </div>
+      
+      <div class="row">
+      
+      <div class="col-md-6">
+                  <div class="widget-area no-padding blank">
+                  <div class="status-upload">
+                    <form>
+                      <textarea placeholder="Comment" ></textarea>
+                      <ul>
+                        <li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Audio"><i class="fa fa-music"></i></a></li>
+                        <li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Video"><i class="fa fa-video-camera"></i></a></li>
+                        <li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Sound Record"><i class="fa fa-microphone"></i></a></li>
+                        <li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Picture"><i class="fa fa-picture-o"></i></a></li>
+                      </ul>
+                      <button type="submit" class="btn btn-success green"><i class="fa fa-share"></i> Share</button>
+                    </form>
+                  </div><!-- Status Upload  -->
+                </div><!-- Widget Area -->
+              </div>
+          
+      </div>
+  </div>
+
+  <!-- <script src="js/vconsole.min.js"></script> -->
+  <!-- <script>
+    var vConsole = new VConsole()
+    console.log("Hello World!")
+  </script> -->
+
+  <script src="https://static.line-scdn.net/liff/edge/versions/2.5.0/sdk.js"></script>
+  <script>
+    function createUniversalLink() {
+    }
+
+    async function shareMsg() {
+    }
+
+    function logOut() {
+    }
+
+    function closed() {
+    }
+
+    async function scanCode() {
+    }
+
+    function openWindow() {
+    }
+
+    async function getFriendship() {
+    }
+
+    async function sendMsg() {
+    }
+
+    function getContext() {
+    }
+
+    async function getUserProfile() {
+      const profile = await liff.getUserProfile()
+      //document.getElementById("pictureurl").src = profile.pictureUrl
+      //document.getElementById("userId").append(profile.userId)
+      //document.getElementById("statusMessage").append(profile.statusMessage)
+      //document.getElementById("dispalyName").append(profile.displayName)
+    }
+
+    function getEnvironment() {
+      document.getElementById("os").append(liff.getOS())
+      document.getElementById("language").append(liff.getLanguage())
+      document.getElementById("version").append(liff.getVersion())
+      document.getElementById("accessToken").append(liff.getAccessToken())
+      document.getElementById("isInClient").append(liff.isInClient())
+      if (liff.isInClient()){
+          document.getElementById("btnLogOut").style.display = "none"
+      }else{
+          document.getElementById("btmMsg").style.display = "none"
+          document.getElementById("btnScanCode").style.display = "none"
+          document.getElementById("btnClose").style.display = "none"
+      }
+    }
+
+    async function main() {
+      await liff.init({ liffId: "1655260581-Rrq69WPG" })
+      getEnvironment()
+      getUserProfile()
+      // getContext()
+      // getFriendship()
+      // createUniversalLink()
+    }
+    main()
+  </script>
+</body>
+</html>
